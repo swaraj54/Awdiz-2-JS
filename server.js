@@ -101,20 +101,20 @@
 // }
 
 
-var namee = "a";
-switch (namee) {
-    case "a":
-        console.log("You are a");
-        break;
-    case "b":
-        console.log("You are b");
-        break;
-    case "c":
-        console.log("You are c");
-        break;
-    default : 
-        console.log("name is different from a,b,c.")
-}
+// var namee = "a";
+// switch (namee) {
+//     case "a":
+//         console.log("You are a");
+//         break;
+//     case "b":
+//         console.log("You are b");
+//         break;
+//     case "c":
+//         console.log("You are c");
+//         break;
+//     default : 
+//         console.log("name is different from a,b,c.")
+// }
 // Q. Make a driving licence website, 
 // allow users for dl if there age is above 18 ,
 // if user age is 18 then allow him for ll .
@@ -123,5 +123,173 @@ switch (namee) {
 
 
 
+// 1. Check if a number is odd or even. (var number = 234).
 
+// var number = 235;
+// // console.log(number % 2 == 0 )
+// if(number % 2 == 0){
+//     console.log("Number is Even");
+// } else {
+//     console.log("Number is Odd");
+// }
+
+
+
+// 2. Find the largest of two number. (var num1 = 5, var  num2 = 10)
+
+// var num1 = 1000000005;
+// var num2 = 100000;
+// if(num1 > num2){
+//     console.log(num1)
+// } else {
+//     console.log(num2)
+// }
+// 3. Find the largest of three number. (var num1 = 15, var  num2 = 20, var num3 =40)
+// var num1 = 4;
+// var num2 = 289080;
+// var num3 = 2;
+// console.log(num1 > num2 && num1 > num3)
+// (num2 > num3) ? console.log("num2 is greater") : console.log("num3 is greater")
+// if (num1 > num2 && num1 > num3) {
+//     console.log(num1)
+// } else if (num2 > num1 && num2 > num3) {
+//     console.log(num2)
+// } else {
+//     console.log(num3)
+// }
+// 4. Find the a number is present in given range, conside both numbers. (var number = 10, range 5-25)
+// var number = 2678905;
+// if( 5 <= number && number <= 25){
+//     console.log("Number is in range");
+// } else {
+//     console.log("Number is Not in range");
+// }
+//    ____ 5 - Q
+// 2 /  1110
+//      1110
+//       0 - R
+
+//       2 / 10 - Q
+//       2 % 10 - R
+
+
+// console.log("Outside function")
+// function add() {
+//     var a = 1;
+//     var b = 2;
+//     console.log(a + b)
+// }
+// add();
+// sub();
+// function sub() {
+//     var a = 1;
+//     var b = 2;
+//     console.log(a - b)
+// }
+
+// var a = 2;
+// var b = 4;
+// function multi(kunal, vrushabh) {
+//     return kunal - vrushabh;
+// }
+// var aa = multi(a, b);
+// console.log(aa, "aa");
+
+// Q.Write a function which will return a greater value.
+
+
+// Q.Find the bigger Number from two numbers
+//  and multiply by 2.
+// var a = 2;
+// var b = 4;
+// function greater(a, b) {
+//     var bigger;
+//     if (a > b) {
+//         bigger = a;
+//     } else {
+//         bigger = b;
+//     }
+//     bigger = bigger * 2;
+//     return bigger;
+// }
+// var ans = greater(a, b);
+// console.log(ans, "ans")
+
+
+
+
+
+
+
+
+
+
+// function return if else syntax props add sub mutli
+
+
+// var 
+// datatypes 
+// if else 
+// switch 
+// function 
+// operators 
+// logical, comparision
+// predefined functions 
+
+
+// Q. Write a function to print numbers from 1 to 100.
+// var rangeStart = 10;
+// var rangeEnd = 20;
+// function printNumbers(start, end) {
+//     for (var a = start; a <= end; a+=2) {
+//         console.log(a)
+//     }
+// }
+// printNumbers(rangeStart, rangeEnd);
+
+// Q. Write a function to print EVEN numbers from 1 to 100.
+
+
+
+
+
+
+
+
+
+
+// rangeEnd++;
+// rangeEnd = rangeEnd + 1;
+// console.log(rangeEnd, "rangeEnd")
+// ans ->
+// for( start, end, steps){
+//      code
+// }
+// for (var a = 1 ; a < 101 ; a++ ) {
+//     console.log(a);
+// }
+// 1 - a = 1; 1 < 10 = true => pass => code  => a++ => 2 = end
+// 2 - a =2 ; 2 < 10 = true => pass => code => a++ => 3 -end
+// 3 - a =3
+
+
+
+
+
+
+
+function findEvenCount(start, end) {
+    var count = 0;
+    for (var i = start; i <= end; i++) {
+        // console.log(i)
+        if (i % 2 == 0) {
+            // console.log(i)
+            count++;
+        }
+        // console.log(count, i,"count here")
+    }
+    return count;
+}
+var ans = findEvenCount(10);
+console.log(ans,"ans here");
 
