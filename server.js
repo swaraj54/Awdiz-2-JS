@@ -278,18 +278,77 @@
 
 
 
-function findEvenCount(start, end) {
-    var count = 0;
-    for (var i = start; i <= end; i++) {
-        // console.log(i)
-        if (i % 2 == 0) {
-            // console.log(i)
-            count++;
-        }
-        // console.log(count, i,"count here")
-    }
-    return count;
-}
-var ans = findEvenCount(10);
-console.log(ans,"ans here");
+// function findEvenCount(start, end) {
+//     var count = 0;
+//     var countOdd = 0;
+//     for (var i = start; i <= end; i++) {
+//         // console.log(i)
+//         if (i % 2 == 0) {
+//             // console.log(i)
+//             count++;
+//         } else {
+//             countOdd++;
+//         }
+//         // console.log(count, i,"count here")
+//     }
+//     return count;
+// }
+// var ans = findEvenCount(10);
+// console.log(ans, "ans here");
 
+
+// Array
+// var arrayName  = [ , , , ,]
+// var student1 = "kunal";
+// var student2 = "vrusabh";
+// var student3 = "poonam";
+// var student4 = "snheal";
+// var student1 = "kunal";
+// var student2 = "vrusabh";
+// var student3 = "poonam";
+// var student4 = "snheal";
+// var awdizStudentList = ["kunal", "vrusabh", "poonam", 234, true, student1, false];
+
+// array.push("anu")  add element at last 
+// array.pop();  remove element from last 
+// array.pop();
+// array.pop();
+// array.pop();
+// array.shift(); remove element from start 
+// array.shift();
+// array.unshift("Kunal","mayuri")   add element at start 
+// array.unshift("madhuri")
+// console.log(array,"array");
+// console.log(array.length," - length of array");
+// console.log(array.length,"array");
+
+var studentList = ["kunal", "poonam", "anu", "krishanna", "abhi", "snheal", "swaraj"];
+console.log(studentList[2])
+
+console.log(studentList.length)
+for (var i = 0; i < studentList.length; i++) {
+    console.log(studentList[i],i)
+}
+
+for (var i = 0; i < studentList.length; i++) {
+    if(studentList[i] == "swaraj"){
+        console.log("kunal is in our data.")
+    }
+}
+
+var flagForSwaraj = false;
+for (var i = 0; i < studentList.length; i++) {
+    if(studentList[i] == "swaraj"){
+        flagForSwaraj = true;
+        console.log("swaraj is in our data.")
+    }
+}
+if(flagForSwaraj == false){
+    console.log("Swaraj in NOT in our db.")
+}
+
+for (var i = 0; i < studentList.length; i++) {
+    if (studentList[i] == "swaraj" || studentList[i] == "kunal") {
+        console.log("swaraj or kunal is in our data.")
+    }
+}
