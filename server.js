@@ -322,33 +322,104 @@
 // console.log(array.length," - length of array");
 // console.log(array.length,"array");
 
-var studentList = ["kunal", "poonam", "anu", "krishanna", "abhi", "snheal", "swaraj"];
-console.log(studentList[2])
+// var studentList = ["kunal", "poonam", "anu", "krishanna", "abhi", "snheal", "swaraj"];
+// console.log(studentList[2])
 
-console.log(studentList.length)
-for (var i = 0; i < studentList.length; i++) {
-    console.log(studentList[i],i)
-}
+// console.log(studentList.length)
+// for (var i = 0; i < studentList.length; i++) {
+//     console.log(studentList[i],i)
+// }
 
-for (var i = 0; i < studentList.length; i++) {
-    if(studentList[i] == "swaraj"){
-        console.log("kunal is in our data.")
-    }
-}
+// for (var i = 0; i < studentList.length; i++) {
+//     if(studentList[i] == "swaraj"){
+//         console.log("kunal is in our data.")
+//     }
+// }
 
-var flagForSwaraj = false;
-for (var i = 0; i < studentList.length; i++) {
-    if(studentList[i] == "swaraj"){
-        flagForSwaraj = true;
-        console.log("swaraj is in our data.")
-    }
-}
-if(flagForSwaraj == false){
-    console.log("Swaraj in NOT in our db.")
-}
+// var flagForSwaraj = false;
+// for (var i = 0; i < studentList.length; i++) {
+//     if(studentList[i] == "swaraj"){
+//         flagForSwaraj = true;
+//         console.log("swaraj is in our data.")
+//     }
+// }
+// if(flagForSwaraj == false){
+//     console.log("Swaraj in NOT in our db.")
+// }
 
-for (var i = 0; i < studentList.length; i++) {
-    if (studentList[i] == "swaraj" || studentList[i] == "kunal") {
-        console.log("swaraj or kunal is in our data.")
-    }
+// for (var i = 0; i < studentList.length; i++) {
+//     if (studentList[i] == "swaraj" || studentList[i] == "kunal") {
+//         console.log("swaraj or kunal is in our data.")
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Array
+// length 
+// push - 
+// pop 
+// shift 
+// unshift 
+
+
+// var fruits = ["mango", "banana", "grape", "watarmelon", "orange"];
+// console.log(fruits[0])
+// console.log(fruits[1])
+// console.log(fruits[2])
+// console.log(fruits.length)
+// for (var i = 0; i < fruits.length; i++) {
+//     console.log(fruits[i])
+// }
+
+// var flag = false;
+// for (var i = 0; i < fruits.length; i++) {
+//     console.log(fruits[i])
+//     if (fruits[i] === "orange") {
+//         flag = true;
+//     }
+// }
+// console.log("flag is here  - ",flag)
+// if (flag == false) {
+//     console.log("Orange is NOT in Our Array.")
+// } else {
+//     console.log("Orange is in Our Array.")
+// }
+
+
+
+// function findMax(arr) {
+//     // console.log(arr,"array here")
+//     var max = arr[0];
+//     for (var i = 1; i < arr.length; i++) {
+//         if (arr[i] > max) {
+//             max = arr[i]
+//         }
+//     }
+//     return max;
+// }
+// var arr = [786, 876, 7654, 567, 87, 567, 56, 887654345676, 87654];
+// console.log(findMax(arr))
+
+// function findMin (arr){
+
+// }
+// console.log(findMin(arr))
+
+
+
+
+function popup() {
+    console.log("Login succeed.")
+    alert("Login succeed.")
 }
