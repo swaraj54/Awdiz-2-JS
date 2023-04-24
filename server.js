@@ -439,6 +439,7 @@ function login(event) {
     var LS = JSON.parse(localStorage.getItem("Users"));
     // console.log(LS, " - LS here")
 
+    var currentUser;
     var flag = false;
     for (var i = 0; i < LS.length; i++) {
         // console.log(i, LS[i])
@@ -446,15 +447,23 @@ function login(event) {
         if (LS[i].userEmail == userEmail && LS[i].userPassword == userPassword) {
             // alert("Email and Pass matchecd")
             flag = true;
+            currentUser = LS[i];
         }
     }
     if (flag == true) {
+        // console.log(currentUser,"currentUser");
+        localStorage.setItem("currentUser", JSON.stringify(currentUser))
+        window.location.href = './home.html';
         alert("Login successfull.")
     } else {
         alert("Credential not matched.")
     }
 }
 
+
+// Step 1 - Once we got matched Credential, save that user as currentUser in LS 
+// Step 2 - now save this currentUser into LS
+// Step 3 - redirect user to home page 
 
 
 
