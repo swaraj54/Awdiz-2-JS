@@ -14,6 +14,8 @@
         <button onclick="window.location.href = `./login.html`">Login</button>
         <button onclick="window.location.href = `./register.html`">Register</button>
     </div>
+    <div id="logout"></div>
+
 
     <script>
         window.onload = function () {
@@ -22,16 +24,24 @@
             // console.log(currentUser,"currentUser")
             if (!!currentUser) {
                 // alert(currentUser.userName)
+                var logoutDiv = document.getElementById("logout");
                 var divFromHtml = document.getElementById("switch");
                 // console.log(divFromHtml,"divFromHtml");
                 // var h1 = document.createElement("h1");
                 // h1.innerText = "Krishana"
                 // divFromHtml.append(h1)
+                var button = '<button onclick="logout()">Logout</button>'
                 var name = `<h1>${currentUser.userName}</h1>`;
                 divFromHtml.innerHTML = name;
+                logoutDiv.innerHTML = button;
             } else {
                 alert("Current user Absent")
             }
+        }
+        function logout(){
+            alert("Logout Success. ")
+            localStorage.removeItem("currentUser");
+            window.location.reload();
         }
     </script>
 </body>
