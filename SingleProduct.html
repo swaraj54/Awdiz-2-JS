@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Product</title>
+    <script>
+        window.onload = function () {
+            var product = JSON.parse(localStorage.getItem("current-product"));
+
+            var divToAppendProduct = document.getElementById("singleProduct");
+            var structure = `<div id='singlePro'> <img src='${product.proImage}' /> <br/> <h1>${product.proName}</h1><br/> <p>${product.proPrice}</p><br/> <button onclick='addCart()'>Add to cart</button> </div>`
+            console.log(structure, "here");
+            divToAppendProduct.innerHTML = structure;
+        }
+        function addCart(){
+            alert("Adding to cart")
+        }
+    </script>
+    <style>
+        #singleProduct {
+            width: 100%;
+        }
+
+        #singlePro {
+            border: 1px solid black;
+            width: 50%;
+            height: 600px;
+            margin: auto;
+            text-align: center;
+        }
+
+        #singlePro>img {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="singleProduct"></div>
+
+</body>
+
+</html>
