@@ -436,7 +436,7 @@ function login(event) {
     var userPassword = document.getElementById("password").value;
     // console.log(userEmail,userPassword,"check here")
 
-    var LS = JSON.parse(localStorage.getItem("Users"));
+    var LS = JSON.parse(localStorage.getItem("userData"));
     // console.log(LS, " - LS here")
 
     var currentUser;
@@ -444,7 +444,7 @@ function login(event) {
     for (var i = 0; i < LS.length; i++) {
         // console.log(i, LS[i])
         // console.log(i, LS[i].userEmail, LS[i].userPassword )
-        if (LS[i].userEmail == userEmail && LS[i].userPassword == userPassword) {
+        if (LS[i].email == userEmail && LS[i].password == userPassword) {
             // alert("Email and Pass matchecd")
             flag = true;
             currentUser = LS[i];

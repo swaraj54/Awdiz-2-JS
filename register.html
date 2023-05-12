@@ -1,16 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Html with JS</title>
 </head>
+
 <body>
     <div>
         <h1>Register</h1>
-        <button onclick="popup()">Click to see Popup</button>
+        <form onsubmit="register(event)">
+            <label></label><br />
+            <input type="text" id="text" /><br />
+            <label></label><br />
+            <input type="email" id="email" /><br />
+            <label></label><br />
+            <input type="password" id="password" /><br />
+            <label></label><br />
+            <input type="submit" />
+        </form>
     </div>
     <script src="./server.js"></script>
+    <script>
+        function register(event) {
+            var name = document.getElementById("text").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var cartProducts  = [];
+            var userData = { name, email, password,cartProducts };
+
+            var LS = JSON.parse(localStorage.getItem("userData")) || [];
+            LS.push(userData);
+            localStorage.setItem("userData", JSON.stringify(LS))
+            alert("Regsiterd...")
+
+        }
+    </script>
 </body>
+
 </html>

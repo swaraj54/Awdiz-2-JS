@@ -11,12 +11,30 @@
             var product = JSON.parse(localStorage.getItem("current-product"));
 
             var divToAppendProduct = document.getElementById("singleProduct");
-            var structure = `<div id='singlePro'> <img src='${product.proImage}' /> <br/> <h1>${product.proName}</h1><br/> <p>${product.proPrice}</p><br/> <button onclick='addCart()'>Add to cart</button> </div>`
+
+            var structure = `<div id='singlePro'> <img src='${product.proImage}' /> <br/> <h1>${product.proName}</h1><br/> <p>${product.proPrice}</p><br/> <button onclick='addCart(${JSON.stringify(product)})'>Add to cart</button> </div>`
             console.log(structure, "here");
             divToAppendProduct.innerHTML = structure;
         }
-        function addCart(){
-            alert("Adding to cart")
+        function addCart(product) {
+            var currentUser = JSON.parse(localStorage.getItem("currentUser"));
+            // console.log(currentUser.email)
+            var userData = JSON.parse(localStorage.getItem("userData"));
+            var flagForUser = false;
+            for (var i = 0; i < userData.length; i++) {
+                if (currentUser.email === userData[i].email) {
+                    // alert("Got...")
+                    if (userData[i].cartProducts == undefined) {
+                        userData[i].cartProducts = [product];
+                    } else {
+                        userData[i].cartProducts.push(product);
+                    }
+                    alert("Product added to cart");
+                    window.location.href = './Cart.html'
+                }
+            }
+            // console.log(userData,'userData')
+            localStorage.setItem("userData", JSON.stringify(userData))
         }
     </script>
     <style>
